@@ -1,3 +1,10 @@
+import pandas as pd
+import numpy as np
+from detect_delimiter import detect
+import scipy.stats as ss
+import sys
+
+
 def check_input():
     input_arguments = sys.argv
     
@@ -43,7 +50,7 @@ def read_data(input_file, weights, impacts):
     return df, weights, impacts
     
         
-def topsis_solve(df, weights, impacts, out_data_file):
+def topsis(df, weights, impacts, out_data_file):
     
     # Step1 - Converting Pandas Dataframe to Numpy Matrix
     num = df.iloc[:,1:].to_numpy()
@@ -90,9 +97,3 @@ def topsis_solve(df, weights, impacts, out_data_file):
     df.to_csv(out_data_file, index=False)
     
     return df
-    
-    
-# in_data_file, weights_data, impacts_data, out_data_file = check_input(input_arguments)
-# topsis_df, weights_data, impacts_data = read_data(in_data_file, weights_data, impacts_data)
-# topsis_df = topsis(topsis_df, weights_data, impacts_data, out_data_file)
-# print(topsis_df)

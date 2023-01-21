@@ -1,0 +1,5 @@
+pandas
+numpy
+detect_delimiter
+scipy
+sys
