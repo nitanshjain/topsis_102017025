@@ -1,15 +1,16 @@
 from setuptools import setup, find_packages
+import pathlib
 import codecs
 import os
 
-
-VERSION = '0.0.1'
+HERE = pathlib.Path(__file__).parent
+VERSION = '0.0.2'
 DESCRIPTION = 'Topsis Calculation Package'
-LONG_DESCRIPTION = 'A package that allows the user to perform Topsis (MCDM) on a dataset'
+LONG_DESCRIPTION = README = (HERE / "README.md").read_text()
 
 # Setting up
 setup(
-    name="Topsis-Nitansh-102017025",
+    name="topsis_nitanshjain_102017025",
     version=VERSION,
     author="Nitansh Jain",
     author_email="<njain_be20@thapar.edu>",
@@ -17,7 +18,7 @@ setup(
     long_description_content_type="text/markdown",
     long_description=LONG_DESCRIPTION,
     packages=find_packages(),
-    install_requires=['pandas', 'numpy', 'detect_delimiter', 'scipy', 'sys'],
+    install_requires=['pandas', 'numpy', 'detect_delimiter', 'scipy'],
     keywords=['python', 'topsis', 'mcdm'],
     classifiers=[
         "Development Status :: 1 - Planning",

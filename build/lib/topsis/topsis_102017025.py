@@ -50,7 +50,7 @@ def read_data(input_file, weights, impacts):
     return df, weights, impacts
     
         
-def topsis(df, weights, impacts, out_data_file):
+def topsis_solve(df, weights, impacts, out_data_file):
     
     # Step1 - Converting Pandas Dataframe to Numpy Matrix
     num = df.iloc[:,1:].to_numpy()
