@@ -1,0 +1,1 @@
+from 102017025 import check_input, read_data, topsis_solve
