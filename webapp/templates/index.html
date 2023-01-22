@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/styles.css">
+    <title>Topsis - Nitansh Jain - 102017025</title>
+</head>
+<body>
+    <form class="topsis" action = "/data" enctype="multipart/form-data" accept=".csv" method="POST">
+        <div>
+            <label for="file">Input File Name</label>
+            <input type="file" id="in_file" name="in_file" enctype="multipart/form-data" required>
+        </div>
+
+        <div>
+            <label>Output File Name</label>
+            <input type="text" id="out_file" name="out_file" enctype="multipart/form-data" required>
+        </div>
+        
+        <div>
+            <label>Weights</label>
+            <input type="text" name="weights" id="weights" enctype="multipart/form-data" required>
+        </div>
+
+        <div>
+            <label>Impacts</label>
+            <input type="text" name="impacts" id="impacts" enctype="multipart/form-data" required>
+        </div>
+
+        <div>
+            <label for="email">Email ID</label>
+            <input type="email" name="email" id="email" enctype="multipart/form-data" required>
+        </div>
+        <div class = "submit_button">
+            <input type="submit" name="submit_form" enctype="multipart/form-data">
+        </div>
+    </form>
+</body>
+</html>
