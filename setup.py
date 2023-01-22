@@ -4,7 +4,7 @@ import codecs
 import os
 
 HERE = pathlib.Path(__file__).parent
-VERSION = '0.0.2'
+VERSION = '0.1.1'
 DESCRIPTION = 'Topsis Calculation Package'
 LONG_DESCRIPTION = README = (HERE / "README.md").read_text()
 
@@ -27,5 +27,10 @@ setup(
         "Operating System :: Unix",
         "Operating System :: MacOS :: MacOS X",
         "Operating System :: Microsoft :: Windows",
-    ]
+    ],
+    entry_points={
+        'console_scripts': [
+            'cursive = cursive.tools.cmd:cursive_command',
+        ],
+    }
 )

@@ -5,7 +5,7 @@ import scipy.stats as ss
 import sys
 
 
-def check_input():
+def solve_topsis():
     input_arguments = sys.argv
     
     try:
@@ -17,9 +17,6 @@ def check_input():
     except IndexError:
         print('Number of input paramters provided are incomplete.')
     
-    return input_file, weights, impacts, output_file
-
-def read_data(input_file, weights, impacts):
     try:
         df = pd.read_csv(input_file)
     except FileNotFoundError:
@@ -46,11 +43,6 @@ def read_data(input_file, weights, impacts):
     
     if any(element not in ['+','-'] for element in impacts):
         print('Make sure your weights are either \'+\' or \'-\'')
-        
-    return df, weights, impacts
-    
-        
-def topsis_solve(df, weights, impacts, out_data_file):
     
     # Step1 - Converting Pandas Dataframe to Numpy Matrix
     num = df.iloc[:,1:].to_numpy()
@@ -94,6 +86,6 @@ def topsis_solve(df, weights, impacts, out_data_file):
     rank = len(perf_score) - ss.rankdata(perf_score).astype(int) + 1
     df['Rank'] = rank
     
-    df.to_csv(out_data_file, index=False)
+    df.to_csv(output_file, index=False)
     
-    return df
+    return 

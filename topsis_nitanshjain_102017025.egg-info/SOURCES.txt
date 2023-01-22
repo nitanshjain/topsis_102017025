@@ -1,9 +1,10 @@
 README.md
 setup.py
 topsis/__init__.py
-topsis/topsis_102017025.py
+topsis/topsis_nitanshjain_102017025.py
 topsis_nitanshjain_102017025.egg-info/PKG-INFO
 topsis_nitanshjain_102017025.egg-info/SOURCES.txt
 topsis_nitanshjain_102017025.egg-info/dependency_links.txt
+topsis_nitanshjain_102017025.egg-info/entry_points.txt
 topsis_nitanshjain_102017025.egg-info/requires.txt
 topsis_nitanshjain_102017025.egg-info/top_level.txt

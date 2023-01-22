@@ -4,7 +4,7 @@
 Technique for Order Preference by Similarity to Ideal Solution (TOPSIS) originated in the 1980s as a multi-criteria decision making method.<br> TOPSIS chooses the alternative of shortest Euclidean distance from the ideal solution, and greatest distance from the negative-ideal solution.
 
 ## Installation
-```pip install topsis_nitansh_102017025```
+```pip install topsis-nitanshjain-102017025```
 
 ## Input csv format
 Input file contain three or more columns<br>
@@ -12,33 +12,31 @@ First column is the object/variable name <br>
 From 2nd to last columns contain numeric values only
 
 ## How to use it
+Python File<br>
+```
+from topsis.topsis_nitanshjain_102017025 import solve_topsis
+solve_topsis()
+```
 Command Prompt<br>
-```topsis <InputDataFile> <Weights> <Impacts> <ResultFileName>```<br>
+```
+topsis <python_file> <Input Data File> <Weights> <Impacts> <Result File Name>
+```
+<br>
+
 Example:<br>
-```topsis inputfile.csv “1,1,1,1,2” “+,+,+,+,-” result.csv```<br><br>
+```
+topsis topsis.py inputfile.csv “1,1,1,1,2” “+,+,+,+,-” result.csv
+```
+<br><br>
 <i>Note: The weights and impacts should be ',' seperated, input file should be in pwd.</i> 
 
 ## Functions, Parameters and Return Values
 
 ```
-function = check_input()
-parameters = none for this function
-return values = input_file, weights (string), impacts (string), output_file
+function = solve_topsis()
+parameters = No input parameters
+return values = Creates a csv file with the topsis rank and performance score
 ```
-
-```
-function = read_data()
-parameters = input_file, weights, impacts
-return values = dataframe, weights (list), impacts (list)
-```
-
-```
-function = topsis_solve()
-parameters = dataframe, weights, impacts, output_file
-return values = dataframe, creates a csv file with the topsis rank and performance score
-```
-
-
 
 ## Sample input data
 | Model       | P1 | P2 | P3 | P4 | P5 |
