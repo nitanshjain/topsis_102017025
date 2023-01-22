@@ -129,7 +129,7 @@ if st.button("Submit"):
         # Add header with pdf name
         part.add_header(
             "Content-Disposition",
-            f"attachment; filename=data.csv",
+            f"attachment; filename={out_file}",
         )
 
         # Add attachment to message and convert message to string
