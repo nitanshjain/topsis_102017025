@@ -12,8 +12,6 @@ import sys
 import os
 
 def solve_topsis(input_file, weights, impacts):
-    
-    
     try:
         df = pd.read_csv(input_file)
     except FileNotFoundError:
@@ -92,13 +90,9 @@ PASSWORD = "zayden@3004"
 st.set_page_config(page_title="Topsis - Nitansh Jain - 102017025", page_icon=":guardsman:", layout="wide")
 
 in_file = st.file_uploader("Input File Name", type=["csv"])
-
 out_file = st.text_input("Output File Name")
-
 weights = st.text_input("Weights")
-
 impacts = st.text_input("Impacts")
-
 email_id = st.text_input("Email ID", key='email')
 
 if st.button("Submit"):
