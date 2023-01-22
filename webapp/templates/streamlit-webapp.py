@@ -88,7 +88,7 @@ def solve_topsis(input_file, weights, impacts):
     return df
 
 
-PASSWORD = os.environ('PASSWORD')
+PASSWORD = st.secrets["PASSWORD"]
 st.set_page_config(page_title="Topsis - Nitansh Jain - 102017025", page_icon=":guardsman:", layout="wide")
 
 in_file = st.file_uploader("Input File Name", type=["csv"])
