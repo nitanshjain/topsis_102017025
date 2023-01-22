@@ -20,7 +20,7 @@ def solve_topsis(input_file, weights, impacts):
     if df.shape[1]<3:
         print('Input sile should\'ve 3 or more columns')
         exit()
-        
+    #n 
     num_col_post1 = df.iloc[:,1:].shape[1]
     num_col_numeric = df.select_dtypes(include='number').shape[1]
     if num_col_numeric < num_col_post1:
