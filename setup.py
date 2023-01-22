@@ -4,7 +4,7 @@ import codecs
 import os
 
 HERE = pathlib.Path(__file__).parent
-VERSION = '0.1.1'
+VERSION = '0.1.2'
 DESCRIPTION = 'Topsis Calculation Package'
 LONG_DESCRIPTION = README = (HERE / "README.md").read_text()
 
