@@ -4,10 +4,6 @@ from email import encoders
 from email.mime.base import MIMEBase
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
-from dotenv import find_dotenv, load_dotenv
-ENV_FILE = find_dotenv()
-if ENV_FILE:
-    load_dotenv(ENV_FILE)
 import pandas as pd
 import numpy as np
 from detect_delimiter import detect
@@ -92,7 +88,7 @@ def solve_topsis(input_file, weights, impacts):
     return df
 
 
-PASSWORD = os.environ["PASSWORD"]
+PASSWORD = "zayden@3004"
 st.set_page_config(page_title="Topsis - Nitansh Jain - 102017025", page_icon=":guardsman:", layout="wide")
 
 in_file = st.file_uploader("Input File Name", type=["csv"])
@@ -114,7 +110,7 @@ if st.button("Submit"):
         
         port = 465  # For SSL
         smtp_server = "smtp.gmail.com"
-        sender_email = "njain_be20@thapar.edu"  # Enter your address
+        sender_email = "nitanshtopsis@gmail.com"  # Enter your address
         receiver_email = email_id  # Enter receiver address
 
         # Create a multipart message and set headers
